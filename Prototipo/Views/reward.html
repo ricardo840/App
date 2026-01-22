@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reward Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e68c4c",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#211811",
+                        "gold-star": "#FFD700",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .star-glow {
+            filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.4));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1b130e] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopAppBar (Modified for minimal reward state) -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-[#1b130e] dark:text-white flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">close</span>
+</div>
+<h2 class="text-[#1b130e] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">
+                Activity Complete
+            </h2>
+</div>
+<div class="flex flex-1 flex-col items-center justify-center px-6">
+<!-- HeadlineText -->
+<div class="mb-8">
+<h1 class="text-[#1b130e] dark:text-white tracking-tight text-[40px] font-extrabold leading-tight px-4 text-center">
+                    Great job!
+                </h1>
+</div>
+<!-- Central Visual Reward (Star) -->
+<div class="relative w-full max-w-[320px] aspect-square flex items-center justify-center mb-12">
+<!-- Soft Glow Backdrop -->
+<div class="absolute inset-0 bg-primary/10 rounded-full blur-[60px]"></div>
+<!-- Large Glowing Star Icon -->
+<div class="star-glow text-[160px] text-gold-star flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 180px; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">
+                        grade
+                    </span>
+</div>
+</div>
+<!-- ProfileHeader / Mascot Area -->
+<div class="flex w-full flex-col gap-4 items-center mb-10">
+<div class="flex gap-6 items-center">
+<!-- Mascot Placeholder -->
+<div class="bg-primary/20 bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24 border-4 border-white dark:border-background-dark shadow-sm" data-alt="friendly orange fox mascot character smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8r9FsO22dt5uAGEGVBTvQ3NC102ToTbBWkaTfz3DQR19bKNEjGf4GfEdQk1io29xWzps1ly3jYB1N03NS-_-_EFK_KiuLnHyk-uAytubvQk6XX6MKZ-2KXUwGojt9iEDHw2T_7rf7np-WD_eu_bY_mVQ2xJgbdXMyDBSHVfhEfbDMZKGNZlpl7G2QKKMfQKq11_14AOyDJzj4VP-DUF6jRp7CUwnx9_DcEJc-Pf8ddP71-HXO4XahV3veOSb9wsBHZ7msmFPGtYQ");'>
+</div>
+<div class="flex flex-col items-start justify-center">
+<p class="text-[#1b130e] dark:text-white text-[24px] font-bold leading-tight tracking-tight">
+                            You did it!
+                        </p>
+<p class="text-[#956d50] dark:text-primary/70 text-lg font-medium leading-normal">
+                            Keep up the great work.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- SingleButton (Sticky to bottom) -->
+<div class="flex px-8 py-8 justify-center w-full max-w-[480px] mx-auto">
+<button class="flex min-w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-16 px-5 bg-primary text-white text-xl font-extrabold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-transform">
+<span class="truncate">Continue</span>
+</button>
+</div>
+<!-- Safe Area Spacer for iOS -->
+<div class="h-6"></div>
+</div>
+</body></html>
