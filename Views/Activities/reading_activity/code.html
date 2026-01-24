@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reading Activity - Letters</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e68c4c",
+                        "background-light": "#f2f7f2",
+                        "background-dark": "#1a1f1a",
+                        "pastel-green": "#e8f5e9",
+                        "accent-green": "#81c784"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1.5rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            min-height: 100dvh;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark flex flex-col font-display overflow-x-hidden">
+<header class="w-full pt-6 px-6">
+<div class="flex items-center justify-between mb-6">
+<button class="flex items-center justify-center size-12 bg-white dark:bg-zinc-800 rounded-full shadow-sm text-zinc-800 dark:text-zinc-100">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<button class="flex items-center justify-center size-12 bg-white dark:bg-zinc-800 rounded-full shadow-sm text-zinc-800 dark:text-zinc-100">
+<span class="material-symbols-outlined text-2xl">volume_up</span>
+</button>
+</div>
+<div class="space-y-6">
+<div class="flex flex-col items-center">
+<span class="text-zinc-500 dark:text-zinc-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-2">Session</span>
+<div class="flex gap-1.5">
+<div class="h-1.5 w-5 rounded-full bg-primary"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-zinc-300 dark:bg-zinc-700"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-zinc-300 dark:bg-zinc-700"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-zinc-300 dark:bg-zinc-700"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-zinc-300 dark:bg-zinc-700"></div>
+</div>
+</div>
+<div class="w-full">
+<div class="flex justify-between items-end mb-1.5">
+<p class="text-zinc-800 dark:text-zinc-100 text-sm font-bold">Activity Progress</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-medium">1 of 5</p>
+</div>
+<div class="h-3 w-full bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 20%;"></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center px-6 pt-8 pb-12">
+<div class="w-full flex flex-col items-center mb-10">
+<div class="flex items-center justify-center gap-12 w-full">
+<div class="text-[140px] font-bold text-zinc-800 dark:text-zinc-100 leading-none">A</div>
+<div class="w-36 h-36 rounded-full bg-white dark:bg-zinc-800 flex items-center justify-center shadow-lg overflow-hidden border-8 border-white dark:border-zinc-800">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="Simple minimalist red apple illustration for kids" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHY5L24ugB_g8E7bJNjhua19r98M7NIC5AqUJl96ZDD_Xod9M_wW0ERepBveC1l0zhnDkCEyJHihN3SlzvWof_UqFHu3K_-3kUzu29FZJJSozKFeqfIjSS_7dIIbiw-v8Cgrp2JFvXez1wGVv-wpTVcN8g82cB6B-43OLc1PmHhcXQyV-Mll-yX1UZUfAmm4NiowHI90Y7maLIS39cBDQpL5bo2RmtRDE5Sr4bls_gOqF2DMAa3uLGXCPMKBAT1yd8ju_sVaIpigI");'>
+</div>
+</div>
+</div>
+<p class="mt-4 text-zinc-400 dark:text-zinc-500 text-xl font-bold tracking-widest uppercase">Apple</p>
+</div>
+<div class="text-center mb-8">
+<h3 class="text-zinc-800 dark:text-zinc-100 text-3xl font-bold tracking-tight px-4">Find the letter <span class="text-primary underline decoration-4 underline-offset-8">A</span></h3>
+</div>
+<div class="w-full flex flex-col gap-4">
+<label class="relative w-full cursor-pointer">
+<input class="peer absolute opacity-0 w-0 h-0" name="letter-choice" type="radio" value="B"/>
+<div class="w-full py-6 rounded-2xl bg-white dark:bg-zinc-900 border-4 border-transparent flex items-center justify-center shadow-md transition-all peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:scale-[1.02]">
+<span class="text-5xl font-bold text-zinc-800 dark:text-zinc-100">B</span>
+</div>
+</label>
+<label class="relative w-full cursor-pointer">
+<input checked="" class="peer absolute opacity-0 w-0 h-0" name="letter-choice" type="radio" value="A"/>
+<div class="w-full py-6 rounded-2xl bg-white dark:bg-zinc-900 border-4 border-transparent flex items-center justify-center shadow-md transition-all peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:scale-[1.02]">
+<span class="text-5xl font-bold text-zinc-800 dark:text-zinc-100">A</span>
+<div class="absolute right-6 size-10 bg-primary rounded-full hidden peer-checked:flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-2xl">check</span>
+</div>
+</div>
+</label>
+<label class="relative w-full cursor-pointer">
+<input class="peer absolute opacity-0 w-0 h-0" name="letter-choice" type="radio" value="C"/>
+<div class="w-full py-6 rounded-2xl bg-white dark:bg-zinc-900 border-4 border-transparent flex items-center justify-center shadow-md transition-all peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:scale-[1.02]">
+<span class="text-5xl font-bold text-zinc-800 dark:text-zinc-100">C</span>
+</div>
+</label>
+</div>
+</main>
+<footer class="p-6 pb-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky bottom-0">
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-xl font-bold py-5 rounded-full shadow-xl shadow-primary/30 flex items-center justify-center gap-3 transition-transform active:scale-95">
+        Next Level
+        <span class="material-symbols-outlined">arrow_forward_ios</span>
+</button>
+</footer>
+<div class="fixed top-40 -left-10 w-48 h-48 bg-accent-green/10 rounded-full blur-3xl -z-10"></div>
+<div class="fixed bottom-60 -right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+
+</body></html>

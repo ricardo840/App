@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Activity Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e68c4c",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#211811",
+                        "card-mint": "#e8f5f1",
+                        "card-blue": "#e8f0f8",
+                        "card-yellow": "#fdf6e8",
+                        "card-lavender": "#f1eef8",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">arrow_back_ios_new</span>
+</button>
+<h2 class="text-[#1b130e] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Activities</h2>
+</header>
+<!-- HeadlineText -->
+<section class="px-6 pt-8 pb-4">
+<h1 class="text-[#1b130e] dark:text-white text-3xl font-bold leading-tight text-center">
+                What would you like <br/>to learn today?
+            </h1>
+</section>
+<!-- ImageGrid (2x2 Layout for Children) -->
+<main class="flex-1 px-6 py-6">
+<div class="grid grid-cols-2 gap-6 h-full max-w-md mx-auto">
+<!-- Letters Card -->
+<button class="flex flex-col items-center gap-4 group">
+<div class="w-full aspect-square bg-card-mint dark:bg-card-mint/10 rounded-xl flex items-center justify-center shadow-sm group-active:scale-95 transition-transform duration-200 overflow-hidden relative">
+<!-- Abstract illustration representing letters -->
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-6xl font-bold text-[#4c8c7c]">A B</span>
+</div>
+<div class="w-full h-full bg-cover bg-center opacity-10" data-alt="Soft pastel abstract pattern with alphabet shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1KmUJAOaH91CwBi-dywdTwX3H4lnMGBQRn2DczT3L0WHmcOoSwK5iRETEt-0lFusLOkRvapbdH2VZVm3LFqrnjZp58maqwLTtpMVWnstHxwdPI3PIixS_Am37sKIletXZNGHxF8ouPrc50WsNYbDvqwxATzuFhlB1g-1epvs8b3FvaeRS-PLwKCDTKfSpAKIualB0MLGpS2bjM_C9AD-8mc4tSNZD1EoN9_3qDiHBnDMDnXZ0Yn6VK2BHGRJjfE8P6Z-PqM63CmE");'></div>
+</div>
+<div>
+<p class="text-[#1b130e] dark:text-white text-lg font-bold">Letters</p>
+<p class="text-primary/70 text-sm font-medium">Learn A-Z</p>
+</div>
+</button>
+<!-- Numbers Card -->
+<button class="flex flex-col items-center gap-4 group">
+<div class="w-full aspect-square bg-card-blue dark:bg-card-blue/10 rounded-xl flex items-center justify-center shadow-sm group-active:scale-95 transition-transform duration-200 overflow-hidden relative">
+<!-- Abstract illustration representing numbers -->
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-6xl font-bold text-[#4c6e8c]">1 2</span>
+</div>
+<div class="w-full h-full bg-cover bg-center opacity-10" data-alt="Soft blue abstract pattern with number shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEbNRxJSd3D0lJfM2KQc9jXuGIrdVKAMZL47di-2Fz1W2-tuAn5olYXJZqnGJcNw8yrjG1FJJjMbp9D40BJx7Bl-TBXP1Aokq9VqcH1rg90t5fw0CBrTryb3B0ZMJTRUJ9pAVUPwMT6dT0Bbyp4MmeRV8F7WSZbu2yaXGH91chYtKNflUUBQj29bddUcckIDz66nP61SSzqr_axmx63Y8-xlq6ZRavJBongCCNykpeqU6U38Q8WBhuG_hAhKad6_aIcleEGHbkBhI");'></div>
+</div>
+<div>
+<p class="text-[#1b130e] dark:text-white text-lg font-bold">Numbers</p>
+<p class="text-primary/70 text-sm font-medium">Learn 123</p>
+</div>
+</button>
+<!-- Shapes Card -->
+<button class="flex flex-col items-center gap-4 group">
+<div class="w-full aspect-square bg-card-yellow dark:bg-card-yellow/10 rounded-xl flex items-center justify-center shadow-sm group-active:scale-95 transition-transform duration-200 overflow-hidden relative">
+<!-- Abstract illustration representing shapes -->
+<div class="absolute inset-0 flex items-center justify-center flex-row gap-2">
+<span class="material-symbols-outlined text-6xl text-[#8c7a4c]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-6xl text-[#8c7a4c]" style="font-variation-settings: 'FILL' 1;">circle</span>
+</div>
+<div class="w-full h-full bg-cover bg-center opacity-10" data-alt="Soft yellow abstract pattern with basic geometric shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClcyIdxcDK_pIdd1cYzOt4klX3ShhpdW-Cx4Pl235aJMfvG3NZPIMSO_887YVY-v-1EUc5duA02nO8eYiRX_QPLhxEiq0KBuRTSSg8wUODLlAOCvti8c2pMowrU0FOrxrP3tiYbse6Ys8qD5-AAIGCF2OUWx49fdvcPrpH_QNDuGUVyAQcCxDvFHG48t5ejLUK7SB_AxrUfDJZE8kSrJrV0FibDZk3dOolrJaa4r_Cpu4DL_j7w7vjakD1ck0bLMCllCHngmWXHJ0");'></div>
+</div>
+<div>
+<p class="text-[#1b130e] dark:text-white text-lg font-bold">Shapes</p>
+<p class="text-primary/70 text-sm font-medium">Fun with shapes</p>
+</div>
+</button>
+<!-- Associations Card -->
+<button class="flex flex-col items-center gap-4 group">
+<div class="w-full aspect-square bg-card-lavender dark:bg-card-lavender/10 rounded-xl flex items-center justify-center shadow-sm group-active:scale-95 transition-transform duration-200 overflow-hidden relative">
+<!-- Abstract illustration representing associations -->
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-7xl text-[#6c4c8c]" style="font-variation-settings: 'FILL' 1;">extension</span>
+</div>
+<div class="w-full h-full bg-cover bg-center opacity-10" data-alt="Soft lavender abstract pattern with puzzle piece shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDB3mlrP-xM6It0AekM3w1h0BfIjzET6T-GmuNckG_S80pdVit1YQZXC4uiJ0w4CqBil1LIcKdKPtgzj4Une8TclfyXCkCBpzZ2ght3FK13Ii0G9toz-oEb47oKDdccCqBQH-_MMyLltftBBmU1zMnozy0nhMcmVoO7FwiYsxEZWDclhDZrvuADG-542gJ7YwG9o2ra2J1y8vb4GJepFb3p58YKpwRZ8sux6PuG0R3rNvVM7SCPF4etkXXeugK5ifmZPlroPFjN7V4");'></div>
+</div>
+<div>
+<p class="text-[#1b130e] dark:text-white text-lg font-bold">Associations</p>
+<p class="text-primary/70 text-sm font-medium">Match items</p>
+</div>
+</button>
+</div>
+</main>
+
+</div>
+</body></html>

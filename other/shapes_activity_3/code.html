@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shapes Activity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#e68c4c",
+                "background-light": "#f8f7f6",
+                "background-dark": "#211811",
+                "pastel-purple": "#f3f0ff",
+                "deep-purple": "#5b4c99",
+              },
+              fontFamily: {
+                "display": ["Plus Jakarta Sans"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+          min-height: 100dvh;
+        }
+        .shape-container {
+            aspect-ratio: 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-pastel-purple dark:bg-background-dark font-display text-[#1b130e] dark:text-white min-h-screen flex flex-col overflow-hidden">
+<header class="px-6 pt-6">
+<div class="flex items-center justify-between mb-2">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow-sm">
+<span class="material-symbols-outlined text-deep-purple dark:text-white">close</span>
+</button>
+<div class="flex-1 px-8">
+<div class="h-3 w-full bg-white dark:bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow-sm">
+<span class="material-symbols-outlined text-primary">stars</span>
+</div>
+</div>
+</header>
+<section class="px-6 py-4 flex flex-col items-center">
+<div class="w-full bg-white/40 dark:bg-zinc-800/40 rounded-xl p-6 border border-white/50 dark:border-zinc-700/50 flex items-center gap-6 shadow-sm">
+<div class="flex-1">
+<h4 class="text-deep-purple/70 dark:text-primary/70 text-[10px] font-bold leading-normal tracking-[0.1em] uppercase mb-1">Visual Matching</h4>
+<h2 class="text-deep-purple dark:text-white tracking-tight text-2xl font-bold leading-tight">Find the matching shape</h2>
+<button class="mt-3 flex items-center gap-2 text-deep-purple dark:text-primary">
+<span class="material-symbols-outlined text-xl">volume_up</span>
+<span class="font-bold text-xs">"Can you find the Circle?"</span>
+</button>
+</div>
+<div class="w-24 h-24 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center border-2 border-dashed border-deep-purple/20 shadow-inner shrink-0">
+<div class="w-12 h-12 rounded-full border-[6px] border-deep-purple dark:border-primary"></div>
+</div>
+</div>
+</section>
+<main class="flex-1 flex flex-col px-6 pb-8 gap-4 overflow-y-auto">
+<button class="w-full flex-1 min-h-[110px] bg-white dark:bg-zinc-800 rounded-[2rem] flex flex-col items-center justify-center shadow-md border-b-4 border-zinc-200 dark:border-zinc-900 active:translate-y-1 active:border-b-0 transition-all group">
+<div class="w-16 h-16 border-[6px] border-deep-purple/30 dark:border-white/20 group-hover:border-deep-purple transition-colors rounded-lg"></div>
+</button>
+<button class="w-full flex-1 min-h-[110px] bg-white dark:bg-zinc-800 rounded-[2rem] flex flex-col items-center justify-center shadow-md border-b-4 border-zinc-200 dark:border-zinc-900 active:translate-y-1 active:border-b-0 transition-all group">
+<div class="w-0 h-0 border-l-[32px] border-l-transparent border-r-[32px] border-r-transparent border-b-[56px] border-b-deep-purple/30 dark:border-b-white/20 group-hover:border-b-deep-purple transition-colors" style="border-bottom-style: solid;"></div>
+</button>
+<button class="w-full flex-1 min-h-[110px] bg-white dark:bg-zinc-800 rounded-[2rem] flex flex-col items-center justify-center shadow-md border-b-4 border-primary/40 active:translate-y-1 active:border-b-0 transition-all ring-4 ring-primary/20 bg-gradient-to-br from-white to-primary/5">
+<div class="w-16 h-16 rounded-full border-[6px] border-primary flex items-center justify-center">
+<div class="w-6 h-6 rounded-full bg-primary/20"></div>
+</div>
+</button>
+</main>
+<div class="absolute -top-10 -left-10 opacity-[0.03] pointer-events-none">
+<span class="material-symbols-outlined text-[300px]">pentagon</span>
+</div>
+<div class="absolute -bottom-20 -right-20 opacity-[0.03] pointer-events-none">
+<span class="material-symbols-outlined text-[400px]">star</span>
+</div>
+
+</body></html>
