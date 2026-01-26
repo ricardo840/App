@@ -1,186 +1,352 @@
-<!DOCTYPE html>
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#e68c4c",
-                        "background-light": "#fbfaf8",
-                        "background-dark": "#211811",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                },
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#e68c4c",
+              "background-light": "#fbfaf8",
+              "background-dark": "#211811",
             },
-        }
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .scrapbook-tape {
-            background: rgba(230, 140, 76, 0.2);
-            transform: rotate(-2deg);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .polaroid-tilt-left { transform: rotate(-1.5deg); }
-        .polaroid-tilt-right { transform: rotate(1.5deg); }
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 1,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .scrapbook-tape {
+        background: rgba(230, 140, 76, 0.2);
+        transform: rotate(-2deg);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+      .polaroid-tilt-left {
+        transform: rotate(-1.5deg);
+      }
+      .polaroid-tilt-right {
+        transform: rotate(1.5deg);
+      }
     </style>
-<style>
-        body {
-            min-height: max(884px, 100dvh);
-        }
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#1b130e] dark:text-[#fbfaf8] transition-colors duration-300">
-<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden max-w-[430px] mx-auto shadow-2xl">
-<div class="relative w-full px-4 pt-6 pb-4">
-<div class="flex items-center gap-4 bg-white dark:bg-[#2d221a] p-4 rounded-xl shadow-sm border border-[#e6dad1]/30">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-16 w-16 border-2 border-primary/20 shrink-0" data-alt="Happy child avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC87uLBRKgn2HjUNGijo6_1r8VA6NwWd20jgrAzM7bd0ggcVqfzZRckCoof87FJPamWlQp7oJu3hoclHk72GBgJZ3AaIpWx4wocKDMryw5sG8hgY1DfKDgSErRgILU3Y_hRmC1iTWGhwkfMA6wpf2kqDWF6vpTkprxaT5eBMtN64t3cHFeWXY7FYz34bvEHgRXKtezJRTZvUE8AaMWLFgvjlcm1KuMMqzJPzZPHpG-ZT-0J7e4LbWr26nbtZ6WKbYKBkYwn-x3ZzcI");'></div>
-<div class="flex flex-col justify-center overflow-hidden">
-<p class="text-[#1b130e] dark:text-[#fbfaf8] text-xl font-bold leading-tight truncate">Great job, Alex!</p>
-<p class="text-[#956d50] dark:text-primary/70 text-xs font-medium"></p>
-<div class="mt-1 flex items-center gap-2">
-<span class="px-2 py-0.5 bg-primary/10 rounded-full text-primary text-[10px] font-bold">Level 2 Explorer</span>
-</div>
-</div>
-<div class="ml-auto flex items-center justify-center size-8 text-[#1b130e] dark:text-[#fbfaf8] cursor-pointer">
-<!--<span class="material-symbols-outlined">settings</span> -->
-</div>
-</div>
-</div>
-<div class="px-4 py-2">
-<div class="relative">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 scrapbook-tape z-10"></div>
-<div class="flex flex-col items-stretch justify-start rounded-lg bg-white dark:bg-[#2d221a] shadow-md border-b-4 border-[#e6dad1]/50 overflow-hidden relative">
-<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Illustration of colorful numbers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDX85shtcybNwBEyhvN94HxdLmxcJMby9524y7ArpdHsLYDoLk1Cbe_CjK6eecRBrhkLc4A1xadLlbR_UCKD_DDeza2uV5NExhUrCmF7wOFQGXr7pSeBdU51JeOE_UXlkZUluarkYnLXDma3nZUnK2n_DG3Evsa3U_h_9TZeaCAovj6PiIWJLdGzikJdWQm7Ywhz6U-FJoRk0UaXZPZMqCKwK0rXqllVyO_Ps1W8r9lr4WEIrbQ604yvtxHnwILcLMd5ioH4tGJK-Y");'></div>
-<div class="flex w-full flex-col p-4 gap-2">
-<div class="flex justify-between items-start">
-<p class="text-[#1b130e] dark:text-[#fbfaf8] text-lg font-bold leading-tight">Today you learned: Numbers 1-3</p>
-<span class="material-symbols-outlined text-primary">auto_awesome</span>
-</div>
-<p class="text-[#956d50] dark:text-primary/70 text-sm font-normal leading-snug">You discovered how to count treats and toys.</p>
-<button class="mt-2 w-full flex cursor-pointer items-center justify-center rounded-full h-10 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20">
-<span>Continue</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-8 flex items-center px-6">
-<div class="h-px flex-1 bg-[#e6dad1]/50"></div>
-<h4 class="text-[#956d50] dark:text-primary/80 text-[10px] font-bold uppercase tracking-[0.2em] px-4">Your Learning Journey</h4>
-<div class="h-px flex-1 bg-[#e6dad1]/50"></div>
-</div>
-<div class="grid grid-cols-2 gap-4 p-6 overflow-y-auto">
-<div class="flex flex-col gap-2 polaroid-tilt-left cursor-pointer active:scale-95 transition-transform">
-<div class="bg-white dark:bg-[#2d221a] p-2 pb-6 shadow-md border border-[#e6dad1]/30">
-<div class="aspect-square bg-primary/5 flex items-center justify-center rounded-sm relative overflow-hidden">
-<span class="material-symbols-outlined text-[48px] text-primary/40">star</span>
-<div class="absolute top-1 right-1">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-</div>
-</div>
-<div class="mt-3 px-1">
-<p class="text-[#1b130e] dark:text-[#fbfaf8] text-sm font-bold leading-tight">Letters A-C</p>
-<p class="text-[#956d50] dark:text-primary/60 text-[10px] font-medium uppercase tracking-wider mt-1">Completed</p>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-2 polaroid-tilt-right cursor-pointer active:scale-95 transition-transform">
-<div class="bg-white dark:bg-[#2d221a] p-2 pb-6 shadow-lg border-2 border-primary/20 ring-4 ring-primary/5">
-<div class="aspect-square bg-primary/10 flex items-center justify-center rounded-sm relative">
-<span class="material-symbols-outlined text-[48px] text-primary">auto_awesome</span>
-<div class="absolute -top-1 -left-1 bg-primary text-white text-[8px] font-bold px-1.5 py-0.5 rounded-sm">TODAY</div>
-</div>
-<div class="mt-3 px-1">
-<p class="text-[#1b130e] dark:text-[#fbfaf8] text-sm font-bold leading-tight">Numbers 1-3</p>
-<p class="text-primary text-[10px] font-bold uppercase tracking-wider mt-1">Just Finished!</p>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-2 polaroid-tilt-right cursor-pointer active:scale-95 transition-transform">
-<div class="bg-white/60 dark:bg-[#2d221a]/60 p-2 pb-6 shadow-sm border border-[#e6dad1]/20 border-dashed">
-<div class="aspect-square bg-[#e6dad1]/10 flex items-center justify-center rounded-sm">
-<span class="material-symbols-outlined text-[40px] text-[#e6dad1]" style="font-variation-settings: 'FILL' 0">star</span>
-</div>
-<div class="mt-3 px-1">
-<p class="text-[#1b130e]/60 dark:text-[#fbfaf8]/60 text-sm font-semibold leading-tight">Shapes</p>
-<p class="text-[#956d50]/60 dark:text-primary/40 text-[10px] font-medium uppercase tracking-wider mt-1">Next Adventure</p>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-2 polaroid-tilt-left opacity-60">
-<div class="bg-white/30 dark:bg-[#2d221a]/30 p-2 pb-6 shadow-none border border-[#e6dad1]/10 border-dashed">
-<div class="aspect-square bg-[#e6dad1]/5 flex items-center justify-center rounded-sm">
-<span class="material-symbols-outlined text-[32px] text-[#e6dad1]/40" style="font-variation-settings: 'FILL' 0">lock</span>
-</div>
-<div class="mt-3 px-1">
-<p class="text-[#1b130e]/30 dark:text-[#fbfaf8]/30 text-sm font-semibold leading-tight">Colors</p>
-<p class="text-[#956d50]/30 dark:text-primary/20 text-[10px] font-medium uppercase tracking-wider mt-1">Coming Soon</p>
-</div>
-</div>
-</div>
-</div>
-<div class="p-6 mb-20 flex flex-col items-center gap-4">
-<p class="text-[#956d50] dark:text-primary/70 text-sm italic text-center px-8 relative">
-<span class="absolute -left-2 top-0 text-2xl text-primary/20">"</span>
-                Every star you earn is a new thing you know!
-                <span class="absolute -right-2 bottom-0 text-2xl text-primary/20">"</span>
-</p>
-
-</div>
-<div class="flex gap-2 border-t border-[#f3ece8] dark:border-[#3a2c20] bg-background-light dark:bg-background-dark px-4 pb-8 pt-2">
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500" href="#">
-        <div class="flex h-8 items-center justify-center">
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#1b130e] dark:text-[#fbfaf8] transition-colors duration-300"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden max-w-[430px] mx-auto shadow-2xl"
+    >
+      <div class="relative w-full px-4 pt-6 pb-4">
+        <button
+          onclick="window.location.href='../home_screen_3/code.html'"
+          class="absolute top-4 left-4 flex items-center justify-center size-10 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm rounded-full shadow-sm text-zinc-800 dark:text-zinc-100 z-10"
+        >
+          <span class="material-symbols-outlined text-xl">arrow_back_ios_new</span>
+        </button>
+        <div
+          class="flex items-center gap-4 bg-white dark:bg-[#2d221a] p-4 rounded-xl shadow-sm border border-[#e6dad1]/30"
+        >
+          <div
+            class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-16 w-16 border-2 border-primary/20 shrink-0"
+            data-alt="Happy child avatar"
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC87uLBRKgn2HjUNGijo6_1r8VA6NwWd20jgrAzM7bd0ggcVqfzZRckCoof87FJPamWlQp7oJu3hoclHk72GBgJZ3AaIpWx4wocKDMryw5sG8hgY1DfKDgSErRgILU3Y_hRmC1iTWGhwkfMA6wpf2kqDWF6vpTkprxaT5eBMtN64t3cHFeWXY7FYz34bvEHgRXKtezJRTZvUE8AaMWLFgvjlcm1KuMMqzJPzZPHpG-ZT-0J7e4LbWr26nbtZ6WKbYKBkYwn-x3ZzcI&quot;);
+            "
+          ></div>
+          <div class="flex flex-col justify-center overflow-hidden">
+            <p
+              class="text-[#1b130e] dark:text-[#fbfaf8] text-xl font-bold leading-tight truncate"
+            >
+              Great job, Alex!
+            </p>
+            a
+            <p
+              class="text-[#956d50] dark:text-primary/70 text-xs font-medium"
+            ></p>
+            <div class="mt-1 flex items-center gap-2">
+              <span
+                class="px-2 py-0.5 bg-primary/10 rounded-full text-primary text-[10px] font-bold"
+                >Level 2 Explorer</span
+              >
+            </div>
+          </div>
+          <div
+            class="ml-auto flex items-center justify-center size-8 text-[#1b130e] dark:text-[#fbfaf8] cursor-pointer"
+          >
+            <!--<span class="material-symbols-outlined">settings</span> -->
+          </div>
+        </div>
+      </div>
+      <div class="px-4 py-2">
+        <div class="relative">
+          <div
+            class="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 scrapbook-tape z-10"
+          ></div>
+          <div
+            class="flex flex-col items-stretch justify-start rounded-lg bg-white dark:bg-[#2d221a] shadow-md border-b-4 border-[#e6dad1]/50 overflow-hidden relative"
+          >
+            <div
+              class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover"
+              data-alt="Illustration of colorful numbers"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDX85shtcybNwBEyhvN94HxdLmxcJMby9524y7ArpdHsLYDoLk1Cbe_CjK6eecRBrhkLc4A1xadLlbR_UCKD_DDeza2uV5NExhUrCmF7wOFQGXr7pSeBdU51JeOE_UXlkZUluarkYnLXDma3nZUnK2n_DG3Evsa3U_h_9TZeaCAovj6PiIWJLdGzikJdWQm7Ywhz6U-FJoRk0UaXZPZMqCKwK0rXqllVyO_Ps1W8r9lr4WEIrbQ604yvtxHnwILcLMd5ioH4tGJK-Y&quot;);
+              "
+            ></div>
+            <div class="flex w-full flex-col p-4 gap-2">
+              <div class="flex justify-between items-start">
+                <p
+                  class="text-[#1b130e] dark:text-[#fbfaf8] text-lg font-bold leading-tight"
+                >
+                  Today you learned: Numbers 1-3
+                </p>
+                <span class="material-symbols-outlined text-primary"
+                  >auto_awesome</span
+                >
+              </div>
+              <p
+                class="text-[#956d50] dark:text-primary/70 text-sm font-normal leading-snug"
+              >
+                You discovered how to count treats and toys.
+              </p>
+              <button
+                class="mt-2 w-full flex cursor-pointer items-center justify-center rounded-full h-10 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20"
+              >
+                <span>Continue</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex items-center px-6">
+        <div class="h-px flex-1 bg-[#e6dad1]/50"></div>
+        <h4
+          class="text-[#956d50] dark:text-primary/80 text-[10px] font-bold uppercase tracking-[0.2em] px-4"
+        >
+          Your Learning Journey
+        </h4>
+        <div class="h-px flex-1 bg-[#e6dad1]/50"></div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-6 overflow-y-auto">
+        <div
+          class="flex flex-col gap-2 polaroid-tilt-left cursor-pointer active:scale-95 transition-transform"
+        >
+          <div
+            class="bg-white dark:bg-[#2d221a] p-2 pb-6 shadow-md border border-[#e6dad1]/30"
+          >
+            <div
+              class="aspect-square bg-primary/5 flex items-center justify-center rounded-sm relative overflow-hidden"
+            >
+              <span
+                class="material-symbols-outlined text-[48px] text-primary/40"
+                >star</span
+              >
+              <div class="absolute top-1 right-1">
+                <span class="material-symbols-outlined text-primary text-[20px]"
+                  >check_circle</span
+                >
+              </div>
+            </div>
+            <div class="mt-3 px-1">
+              <p
+                class="text-[#1b130e] dark:text-[#fbfaf8] text-sm font-bold leading-tight"
+              >
+                Letters A-C
+              </p>
+              <p
+                class="text-[#956d50] dark:text-primary/60 text-[10px] font-medium uppercase tracking-wider mt-1"
+              >
+                Completed
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-2 polaroid-tilt-right cursor-pointer active:scale-95 transition-transform"
+        >
+          <div
+            class="bg-white dark:bg-[#2d221a] p-2 pb-6 shadow-lg border-2 border-primary/20 ring-4 ring-primary/5"
+          >
+            <div
+              class="aspect-square bg-primary/10 flex items-center justify-center rounded-sm relative"
+            >
+              <span class="material-symbols-outlined text-[48px] text-primary"
+                >auto_awesome</span
+              >
+              <div
+                class="absolute -top-1 -left-1 bg-primary text-white text-[8px] font-bold px-1.5 py-0.5 rounded-sm"
+              >
+                TODAY
+              </div>
+            </div>
+            <div class="mt-3 px-1">
+              <p
+                class="text-[#1b130e] dark:text-[#fbfaf8] text-sm font-bold leading-tight"
+              >
+                Numbers 1-3
+              </p>
+              <p
+                class="text-primary text-[10px] font-bold uppercase tracking-wider mt-1"
+              >
+                Just Finished!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-2 polaroid-tilt-right cursor-pointer active:scale-95 transition-transform"
+        >
+          <div
+            class="bg-white/60 dark:bg-[#2d221a]/60 p-2 pb-6 shadow-sm border border-[#e6dad1]/20 border-dashed"
+          >
+            <div
+              class="aspect-square bg-[#e6dad1]/10 flex items-center justify-center rounded-sm"
+            >
+              <span
+                class="material-symbols-outlined text-[40px] text-[#e6dad1]"
+                style="font-variation-settings: &quot;FILL&quot; 0"
+                >star</span
+              >
+            </div>
+            <div class="mt-3 px-1">
+              <p
+                class="text-[#1b130e]/60 dark:text-[#fbfaf8]/60 text-sm font-semibold leading-tight"
+              >
+                Shapes
+              </p>
+              <p
+                class="text-[#956d50]/60 dark:text-primary/40 text-[10px] font-medium uppercase tracking-wider mt-1"
+              >
+                Next Adventure
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 polaroid-tilt-left opacity-60">
+          <div
+            class="bg-white/30 dark:bg-[#2d221a]/30 p-2 pb-6 shadow-none border border-[#e6dad1]/10 border-dashed"
+          >
+            <div
+              class="aspect-square bg-[#e6dad1]/5 flex items-center justify-center rounded-sm"
+            >
+              <span
+                class="material-symbols-outlined text-[32px] text-[#e6dad1]/40"
+                style="font-variation-settings: &quot;FILL&quot; 0"
+                >lock</span
+              >
+            </div>
+            <div class="mt-3 px-1">
+              <p
+                class="text-[#1b130e]/30 dark:text-[#fbfaf8]/30 text-sm font-semibold leading-tight"
+              >
+                Colors
+              </p>
+              <p
+                class="text-[#956d50]/30 dark:text-primary/20 text-[10px] font-medium uppercase tracking-wider mt-1"
+              >
+                Coming Soon
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-6 mb-20 flex flex-col items-center gap-4">
+        <p
+          class="text-[#956d50] dark:text-primary/70 text-sm italic text-center px-8 relative"
+        >
+          <span class="absolute -left-2 top-0 text-2xl text-primary/20">"</span>
+          Every star you earn is a new thing you know!
+          <span class="absolute -right-2 bottom-0 text-2xl text-primary/20"
+            >"</span
+          >
+        </p>
+      </div>
+      <div
+        class="flex gap-2 border-t border-[#f3ece8] dark:border-[#3a2c20] bg-background-light dark:bg-background-dark px-4 pb-8 pt-2"
+      >
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500"
+          href="../home_screen_3/code.html"
+        >
+          <div class="flex h-8 items-center justify-center">
             <span class="material-symbols-outlined">home</span>
-        </div>
-        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
-    </a>
+          </div>
+          <p class="text-xs font-medium leading-normal tracking-[0.015em]">
+            Home
+          </p>
+        </a>
 
-    
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500" href="#">
-        <div class="flex h-8 items-center justify-center">
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500"
+          href="../selection/code.html"
+        >
+          <div class="flex h-8 items-center justify-center">
             <span class="material-symbols-outlined">book_4</span>
-        </div>
-        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Lessons</p>
-    </a>
+          </div>
+          <p class="text-xs font-medium leading-normal tracking-[0.015em]">
+            Lessons
+          </p>
+        </a>
 
-
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500" href="#">
-        <div class="flex h-8 items-center justify-center">
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500"
+          href="../character_customization/code.html"
+        >
+          <div class="flex h-8 items-center justify-center">
             <span class="material-symbols-outlined">palette</span>
-        </div>
-        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Custom</p>
-    </a>
+          </div>
+          <p class="text-xs font-medium leading-normal tracking-[0.015em]">
+            Custom
+          </p>
+        </a>
 
-
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
-        <div class="flex h-8 items-center justify-center">
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-primary"
+          href="#"
+        >
+          <div class="flex h-8 items-center justify-center">
             <span class="material-symbols-outlined">emoji_events</span>
-        </div>
-        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Awards</p>
-    </a>
-</div>
-</div>
-
-</body></html>
+          </div>
+          <p class="text-xs font-medium leading-normal tracking-[0.015em]">
+            Awards
+          </p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

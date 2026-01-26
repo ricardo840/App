@@ -1,83 +1,146 @@
-<!DOCTYPE html>
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Math Activity - Numbers</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+    <!doctype html>
+    <html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Math Activity - Numbers</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet"
+        />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet"
+        />
+        <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
-                extend: {
-                    colors: {
-                        "primary": "#e68c4c",
-                        "background-light": "#f0f4f8",
-                        "background-dark": "#1a1e23",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            extend: {
+                colors: {
+                primary: "#e68c4c",
+                "background-light": "#f0f4f8",
+                "background-dark": "#1a1e23",
+                },
+                fontFamily: {
+                display: ["Plus Jakarta Sans", "sans-serif"],
+                },
+                borderRadius: {
+                DEFAULT: "1rem",
+                lg: "2rem",
+                xl: "3rem",
+                full: "9999px",
                 },
             },
-        }
-    </script>
-<style>
+            },
+        };
+        </script>
+        <style>
         body {
             min-height: 100dvh;
         }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#1b130e] dark:text-white transition-colors duration-300">
-<div class="relative flex h-screen w-full flex-col overflow-hidden max-w-[430px] mx-auto bg-background-light dark:bg-background-dark shadow-2xl">
-<div class="flex items-center px-6 pt-6 pb-2 relative">
-<div class="text-[#1b130e] dark:text-white flex size-12 shrink-0 items-center cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all justify-start">
-<span class="material-symbols-outlined text-3xl">arrow_back_ios_new</span>
-</div>
-<h2 class="text-[#1b130e] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Count the Apples</h2>
-</div>
-<div class="px-10 py-2">
-<div class="relative w-full h-1.5 rounded-full bg-gray-200 dark:bg-white/10 overflow-hidden">
-<div class="absolute left-0 top-0 h-full rounded-full bg-primary" style="width: 30%;"></div>
-</div>
-<p class="text-[10px] font-bold uppercase tracking-widest text-center mt-1 opacity-50">Progress 3/10</p>
-</div>
-<div class="flex flex-1 flex-col relative overflow-y-auto px-6 pb-10">
-<div class="mt-8 mb-10 text-center">
-<span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider mb-3">Lesson 3</span>
-<h1 class="text-3xl font-extrabold text-[#2d3748] dark:text-blue-100">How many are there?</h1>
-</div>
-<div class="flex justify-center items-center gap-8 mb-12 py-4">
-<div class="w-20 h-20 bg-center bg-no-repeat bg-contain" data-alt="A simple flat red apple illustration with leaf" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxWwB2CpjtITUa3S5ruBDmZtxf9IvgHTT-Gl_w9GSmOwe2nkYfKV049JMbLgwVrXVy2JKm2Txkz4rFiTnaRuCWAqbSahLFFZEInypVlRczAKcsEtDijbvAoBzkjll9Ywnl9RlFdYsXIMHL0xng6xs-HlH6iXVGtZrAOXVhQpwDeI5HxuCXd1CF1qK5xMRjeImwaNUGGsiAaxDOFa1Tjv4_b8B_HfHEc6731xlCyojKKhiBf6eFRmzMPYda4KkgNSBQa8tdpcNSrmY");'></div>
-<div class="w-20 h-20 bg-center bg-no-repeat bg-contain" data-alt="A simple flat red apple illustration with leaf" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-1QudpgTLY9-GxQ2yFkMO__DW6BOMjZBKIz15q_CNgpgLvA3QgVHAWluOZmeA5wew6fj8fKvhICWTNGpuWqPcW2qYMt5TLnNiAWktAkhj08wCgBUlgPNTgafMd9GFDeteb-BScvVxmFKuhvBgTUd-7jcY-j9FNRsYYXWoAJoqcH2WCeZoS2ngEoryspPraw2PT6JPMurk1KO60zf1GfuhgWGiPagnOe7m500XW8HCiRJsfzOQx_enXeGBqyFLm5m36QuwAgyj_RI");'></div>
-<div class="w-20 h-20 bg-center bg-no-repeat bg-contain" data-alt="A simple flat red apple illustration with leaf" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASabTHVtiK2KKv-D3iU0MN4lJmB7jeCc-nTC2DU6JZODOXwynHlI6eyiqbbnATxF2TqmstG4J-WZV9NvCRj8XwzrWTLPZaC30CUSJbcNmgxX8-JKx5ChhGdatYCLoGkcd_sIEHpgE2zqWLPO32hk_xstnex95dARjCz4tSbbtCEQTmnngQMuScEWfDZ4LZ7XvCahrVEo9IReAcmsfYCd7roHFJUHqYYzaK36mk-YuFdLLf-cZ_K0myHyqYqkISbt6YB_TdaSvMcBs");'></div>
-</div>
-<div class="flex flex-col gap-4 w-full max-w-[320px] mx-auto mb-8">
-<button class="flex w-full h-24 cursor-pointer items-center justify-center overflow-hidden rounded-[2rem] bg-white dark:bg-white/10 text-[#1b130e] dark:text-white text-4xl font-extrabold shadow-sm hover:shadow-md active:scale-95 transition-all border-b-4 border-gray-200 dark:border-black/20">
-<span>1</span>
-</button>
-<button class="flex w-full h-24 cursor-pointer items-center justify-center overflow-hidden rounded-[2rem] bg-white dark:bg-white/10 text-[#1b130e] dark:text-white text-4xl font-extrabold shadow-sm hover:shadow-md active:scale-95 transition-all border-b-4 border-gray-200 dark:border-black/20">
-<span>2</span>
-</button>
-<button class="flex w-full h-24 cursor-pointer items-center justify-center overflow-hidden rounded-[2rem] bg-primary text-white text-4xl font-extrabold shadow-md hover:shadow-lg active:scale-95 transition-all border-b-4 border-[#c57235]">
-<span>3</span>
-</button>
-</div>
-<div class="mt-auto py-6 flex items-center justify-center opacity-40">
-<div class="flex gap-2">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<div class="size-2 rounded-full bg-primary"></div>
-<div class="size-2 rounded-full bg-primary/40"></div>
-</div>
-</div>
-</div>
-</div>
-
-</body></html>
+        </style>
+        <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        </style>
+    </head>
+    <body
+        class="bg-background-light dark:bg-background-dark font-display text-[#1b130e] dark:text-white transition-colors duration-300"
+    >
+        <div
+        class="relative flex h-screen w-full flex-col overflow-hidden max-w-[430px] mx-auto bg-background-light dark:bg-background-dark shadow-2xl"
+        >
+        <div class="flex items-center px-6 pt-6 pb-2 relative">
+            <div
+            onclick="window.location.href='../../selection/code.html'"
+            class="text-[#1b130e] dark:text-white flex size-12 shrink-0 items-center cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all justify-start"
+            >
+            <span class="material-symbols-outlined text-3xl"
+                >arrow_back_ios_new</span
+            >
+            </div>
+            <h2
+            class="text-[#1b130e] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12"
+            >
+            Count the Apples
+            </h2>
+        </div>
+        <div class="px-10 py-2">
+            <div
+            class="relative w-full h-1.5 rounded-full bg-gray-200 dark:bg-white/10 overflow-hidden"
+            >
+            <div
+                class="absolute left-0 top-0 h-full rounded-full bg-primary"
+                style="width: 30%"
+            ></div>
+            </div>
+            <p
+            class="text-[10px] font-bold uppercase tracking-widest text-center mt-1 opacity-50"
+            >
+            Progress 3/10
+            </p>
+        </div>
+        <div class="flex flex-1 flex-col relative overflow-y-auto px-6 pb-10">
+            <div class="mt-8 mb-10 text-center">
+            <span
+                class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider mb-3"
+                >Lesson 3</span
+            >
+            <h1 class="text-3xl font-extrabold text-[#2d3748] dark:text-blue-100">
+                How many are there?
+            </h1>
+            </div>
+            <div class="flex justify-center items-center gap-8 mb-12 py-4">
+            <div
+                class="w-20 h-20 bg-center bg-no-repeat bg-contain"
+                data-alt="A simple flat red apple illustration with leaf"
+                style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDxWwB2CpjtITUa3S5ruBDmZtxf9IvgHTT-Gl_w9GSmOwe2nkYfKV049JMbLgwVrXVy2JKm2Txkz4rFiTnaRuCWAqbSahLFFZEInypVlRczAKcsEtDijbvAoBzkjll9Ywnl9RlFdYsXIMHL0xng6xs-HlH6iXVGtZrAOXVhQpwDeI5HxuCXd1CF1qK5xMRjeImwaNUGGsiAaxDOFa1Tjv4_b8B_HfHEc6731xlCyojKKhiBf6eFRmzMPYda4KkgNSBQa8tdpcNSrmY&quot;);
+                "
+            ></div>
+            <div
+                class="w-20 h-20 bg-center bg-no-repeat bg-contain"
+                data-alt="A simple flat red apple illustration with leaf"
+                style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB-1QudpgTLY9-GxQ2yFkMO__DW6BOMjZBKIz15q_CNgpgLvA3QgVHAWluOZmeA5wew6fj8fKvhICWTNGpuWqPcW2qYMt5TLnNiAWktAkhj08wCgBUlgPNTgafMd9GFDeteb-BScvVxmFKuhvBgTUd-7jcY-j9FNRsYYXWoAJoqcH2WCeZoS2ngEoryspPraw2PT6JPMurk1KO60zf1GfuhgWGiPagnOe7m500XW8HCiRJsfzOQx_enXeGBqyFLm5m36QuwAgyj_RI&quot;);
+                "
+            ></div>
+            <div
+                class="w-20 h-20 bg-center bg-no-repeat bg-contain"
+                data-alt="A simple flat red apple illustration with leaf"
+                style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuASabTHVtiK2KKv-D3iU0MN4lJmB7jeCc-nTC2DU6JZODOXwynHlI6eyiqbbnATxF2TqmstG4J-WZV9NvCRj8XwzrWTLPZaC30CUSJbcNmgxX8-JKx5ChhGdatYCLoGkcd_sIEHpgE2zqWLPO32hk_xstnex95dARjCz4tSbbtCEQTmnngQMuScEWfDZ4LZ7XvCahrVEo9IReAcmsfYCd7roHFJUHqYYzaK36mk-YuFdLLf-cZ_K0myHyqYqkISbt6YB_TdaSvMcBs&quot;);
+                "
+            ></div>
+            </div>
+            <div class="flex flex-col gap-4 w-full max-w-[320px] mx-auto mb-8">
+            <button
+                class="flex w-full h-24 cursor-pointer items-center justify-center overflow-hidden rounded-[2rem] bg-white dark:bg-white/10 text-[#1b130e] dark:text-white text-4xl font-extrabold shadow-sm hover:shadow-md active:scale-95 transition-all border-b-4 border-gray-200 dark:border-black/20"
+            >
+                <span>1</span>
+            </button>
+            <button
+                class="flex w-full h-24 cursor-pointer items-center justify-center overflow-hidden rounded-[2rem] bg-white dark:bg-white/10 text-[#1b130e] dark:text-white text-4xl font-extrabold shadow-sm hover:shadow-md active:scale-95 transition-all border-b-4 border-gray-200 dark:border-black/20"
+            >
+                <span>2</span>
+            </button>
+            <button
+                class="flex w-full h-24 cursor-pointer items-center justify-center overflow-hidden rounded-[2rem] bg-primary text-white text-4xl font-extrabold shadow-md hover:shadow-lg active:scale-95 transition-all border-b-4 border-[#c57235]"
+            >
+                <span>3</span>
+            </button>
+            </div>
+            <div class="mt-auto py-6 flex items-center justify-center opacity-40">
+            <div class="flex gap-2">
+                <div class="size-2 rounded-full bg-primary/40"></div>
+                <div class="size-2 rounded-full bg-primary"></div>
+                <div class="size-2 rounded-full bg-primary/40"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </body>
+    </html>

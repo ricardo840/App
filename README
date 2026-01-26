@@ -1,0 +1,50 @@
+Te explico lo que tengo pensado para el flujo de pantallas y comportamiento de las pantallas de la aplicación.
+
+## FLUJO DE ONBOARDING (Primera vez)
+1. loading_1: Pantalla de carga inicial con animación.
+2. home_screen_name_2: Introducción del usuario, poner su nombre.
+3. character_customization: Personalización del personaje/mascota (selección de color del personaje).
+4. color_palette_settings: Selección de paleta de colores temática de la app (Ocean, Forest, Sunset, etc.).
+5. home_screen_3: Pantalla principal con el perfil completo configurado.
+
+## PANTALLA PRINCIPAL (home_screen_3)
+De home_screen_3 tenemos 3 opciones: 
+- Play: Nos lleva a la pantalla de selección de lecciones (selection).
+- Settings: Nos lleva a la pantalla de character_customization.
+- Progress: Nos lleva a la pantalla de progreso (progress_screen).
+
+## NAVEGACIÓN POST-ONBOARDING
+Desde Settings (character_customization), el usuario puede acceder a:
+- Character: Pantalla actual de personalización del personaje.
+- Palette: Acceso a color_palette_settings mediante el bottom navigation bar (ícono "palette").
+
+La pantalla character_customization tiene un bottom nav con 4 opciones:
+- Home: Vuelve a home_screen_3
+- Lessons: Va a selection
+- Custom: Permanece en character_customization (selección de color del personaje)
+- Palette: Va a color_palette_settings (selección de paleta temática)
+
+- Desde color_palette_settings, el usuario puede regresar a home_screen_3 usando el bottom nav bar o seleccionar "Custom" para volver a character_customization.
+
+## FLUJO DE LECCIONES Y ACTIVIDADES
+Desde selection, el usuario elige una lección (Reading, Numbers, Association, Matching, etc.).
+
+**Estructura de cada lección:**
+Cada lección consta de 3 actividades consecutivas del mismo tema seguidas de una pantalla de recompensas.
+
+**Flujo completo de una lección:**
+1. selection → Usuario selecciona tema (ej: Reading)
+2. Actividad 1 del tema
+3. Actividad 2 del tema
+4. Actividad 3 del tema
+5. reward_activity → Pantalla de celebración con 2 opciones:
+   - **"Choose Lesson"** (botón principal): Regresa a selection para elegir otra lección o tema diferente
+   - **"Next Lesson"** (botón secundario): Continúa con la siguiente lección del mismo tema (si existe)
+
+**Tipos de lecciones disponibles:**
+- reading_activity: Actividades de lectura y letras
+- numbers_activity: Actividades de números y matemáticas
+- association_activity: Actividades de asociación de conceptos
+- matching_activity: Actividades de emparejamiento
+
+**Nota:** Actualmente cada tipo de lección tiene una actividad implementada, con planes de expandir a múltiples actividades variadas por tema.

@@ -1,120 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Character Customization</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#e68c4c",
-                        "background-light": "#f8f7f6",
-                        "background-dark": "#211811",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans"]
-                    },
-                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
-                },
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Character Customization</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#e68c4c",
+              "background-light": "#f8f7f6",
+              "background-dark": "#211811",
             },
-        }
+            fontFamily: {
+              display: ["Plus Jakarta Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark font-display">
-<div class="relative flex h-screen w-full flex-col overflow-x-hidden">
-<!-- TopAppBar -->
-<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between">
-<div class="text-[#1b130e] dark:text-white flex size-12 shrink-0 items-center cursor-pointer">
-<span class="material-symbols-outlined">arrow_back_ios</span>
-</div>
-<h2 class="text-[#1b130e] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Character</h2>
-<div class="flex w-12 items-center justify-end">
-<p class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0 cursor-pointer">Done</p>
-</div>
-</div>
-<div class="flex-1 flex flex-col items-center justify-center px-4">
-<!-- HeaderImage / Mascot Area -->
-<div class="w-full max-w-sm aspect-square bg-white dark:bg-[#2d221a] rounded-xl flex items-center justify-center shadow-sm relative overflow-hidden">
-<!-- Abstract Mascot Placeholder (Represented as a friendly shape) -->
-<div class="w-48 h-48 bg-[#ADD8E6] rounded-full relative shadow-inner">
-<!-- Eyes -->
-<div class="absolute top-1/3 left-1/4 w-4 h-4 bg-[#1b130e] rounded-full"></div>
-<div class="absolute top-1/3 right-1/4 w-4 h-4 bg-[#1b130e] rounded-full"></div>
-<!-- Smile -->
-<div class="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-8 h-4 border-b-4 border-[#1b130e] rounded-full"></div>
-</div>
-<!-- Data Alt for Mascot -->
-<div class="sr-only" data-alt="A friendly blue circular mascot with large eyes and a smile"></div>
-</div>
-<!-- HeadlineText -->
-<div class="mt-8">
-<h3 class="text-[#1b130e] dark:text-white tracking-light text-2xl font-bold leading-tight px-4 text-center">Pick your friend's color</h3>
-<p class="text-gray-500 dark:text-gray-400 text-center mt-2">Which one is your favorite?</p>
-</div>
-<!-- RadioList / Color Selector -->
-<div class="flex flex-wrap justify-center gap-6 p-8 mt-4">
-<!-- Light Blue -->
-<label class="size-16 rounded-full border-4 border-white dark:border-[#2d221a] shadow-md ring-primary has-[:checked]:ring-4 transition-all cursor-pointer" style="background-color: #ADD8E6;">
-<input checked="" class="hidden" name="color-picker" type="radio"/>
-</label>
-<!-- Soft Pink -->
-<label class="size-16 rounded-full border-4 border-white dark:border-[#2d221a] shadow-md ring-primary has-[:checked]:ring-4 transition-all cursor-pointer" style="background-color: #FFC0CB;">
-<input class="hidden" name="color-picker" type="radio"/>
-</label>
-<!-- Pale Green -->
-<label class="size-16 rounded-full border-4 border-white dark:border-[#2d221a] shadow-md ring-primary has-[:checked]:ring-4 transition-all cursor-pointer" style="background-color: #98FB98;">
-<input class="hidden" name="color-picker" type="radio"/>
-</label>
-<!-- Peach -->
-<label class="size-16 rounded-full border-4 border-white dark:border-[#2d221a] shadow-md ring-primary has-[:checked]:ring-4 transition-all cursor-pointer" style="background-color: #FFDAB9;">
-<input class="hidden" name="color-picker" type="radio"/>
-</label>
-</div>
-</div>
-<!-- BottomNavBar -->
-<div class="flex gap-2 border-t border-[#f3ece8] dark:border-[#3a2c20] bg-background-light dark:bg-background-dark px-4 pb-8 pt-2">
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500" href="#">
-        <div class="flex h-8 items-center justify-center">
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex h-screen w-full flex-col overflow-x-hidden">
+      <!-- TopAppBar -->
+      <div
+        class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between"
+      >
+        <div
+          class="text-[#1b130e] dark:text-white flex size-12 shrink-0 items-center cursor-pointer"
+        >
+          <span class="material-symbols-outlined">arrow_back_ios</span>
+        </div>
+        <h2
+          class="text-[#1b130e] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center"
+        >
+          Character
+        </h2>
+        <div class="flex w-12 items-center justify-end">
+          <p
+            onclick="window.location.href='../color_palette_settings/code.html'"
+            class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0 cursor-pointer"
+          >
+            Done
+          </p>
+        </div>
+      </div>
+      <div class="flex-1 flex flex-col items-center justify-center px-4">
+        <!-- HeaderImage / Mascot Area -->
+        <div
+          class="w-full max-w-sm aspect-square bg-white dark:bg-[#2d221a] rounded-xl flex items-center justify-center shadow-sm relative overflow-hidden"
+        >
+          <!-- Abstract Mascot Placeholder (Represented as a friendly shape) -->
+          <div
+            class="w-48 h-48 bg-[#ADD8E6] rounded-full relative shadow-inner"
+          >
+            <!-- Eyes -->
+            <div
+              class="absolute top-1/3 left-1/4 w-4 h-4 bg-[#1b130e] rounded-full"
+            ></div>
+            <div
+              class="absolute top-1/3 right-1/4 w-4 h-4 bg-[#1b130e] rounded-full"
+            ></div>
+            <!-- Smile -->
+            <div
+              class="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-8 h-4 border-b-4 border-[#1b130e] rounded-full"
+            ></div>
+          </div>
+          <!-- Data Alt for Mascot -->
+          <div
+            class="sr-only"
+            data-alt="A friendly blue circular mascot with large eyes and a smile"
+          ></div>
+        </div>
+        <!-- HeadlineText -->
+        <div class="mt-8">
+          <h3
+            class="text-[#1b130e] dark:text-white tracking-light text-2xl font-bold leading-tight px-4 text-center"
+          >
+            Pick your friend's color
+          </h3>
+          <p class="text-gray-500 dark:text-gray-400 text-center mt-2">
+            Which one is your favorite?
+          </p>
+        </div>
+        <!-- RadioList / Color Selector -->
+        <div class="flex flex-wrap justify-center gap-6 p-8 mt-4">
+          <!-- Light Blue -->
+          <label
+            class="size-16 rounded-full border-4 border-white dark:border-[#2d221a] shadow-md ring-primary has-[:checked]:ring-4 transition-all cursor-pointer"
+            style="background-color: #add8e6"
+          >
+            <input checked="" class="hidden" name="color-picker" type="radio" />
+          </label>
+          <!-- Soft Pink -->
+          <label
+            class="size-16 rounded-full border-4 border-white dark:border-[#2d221a] shadow-md ring-primary has-[:checked]:ring-4 transition-all cursor-pointer"
+            style="background-color: #ffc0cb"
+          >
+            <input class="hidden" name="color-picker" type="radio" />
+          </label>
+          <!-- Pale Green -->
+          <label
+            class="size-16 rounded-full border-4 border-white dark:border-[#2d221a] shadow-md ring-primary has-[:checked]:ring-4 transition-all cursor-pointer"
+            style="background-color: #98fb98"
+          >
+            <input class="hidden" name="color-picker" type="radio" />
+          </label>
+          <!-- Peach -->
+          <label
+            class="size-16 rounded-full border-4 border-white dark:border-[#2d221a] shadow-md ring-primary has-[:checked]:ring-4 transition-all cursor-pointer"
+            style="background-color: #ffdab9"
+          >
+            <input class="hidden" name="color-picker" type="radio" />
+          </label>
+        </div>
+      </div>
+      <!-- BottomNavBar -->
+      <div
+        class="flex gap-2 border-t border-[#f3ece8] dark:border-[#3a2c20] bg-background-light dark:bg-background-dark px-4 pb-8 pt-2"
+      >
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500"
+          href="../home_screen_3/code.html"
+        >
+          <div class="flex h-8 items-center justify-center">
             <span class="material-symbols-outlined">home</span>
-        </div>
-        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
-    </a>
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500" href="#">
-        <div class="flex h-8 items-center justify-center">
+          </div>
+          <p class="text-xs font-medium leading-normal tracking-[0.015em]">
+            Home
+          </p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500"
+          href="../selection/code.html"
+        >
+          <div class="flex h-8 items-center justify-center">
             <span class="material-symbols-outlined">book_4</span>
-        </div>
-        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Lessons</p>
-    </a>
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
-        <div class="flex h-8 items-center justify-center">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">palette</span>
-        </div>
-        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Custom</p>
-    </a>
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500" href="#">
-        <div class="flex h-8 items-center justify-center">
+          </div>
+          <p class="text-xs font-medium leading-normal tracking-[0.015em]">
+            Lessons
+          </p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-primary"
+          href="#"
+        >
+          <div class="flex h-8 items-center justify-center">
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >palette</span
+            >
+          </div>
+          <p class="text-xs font-medium leading-normal tracking-[0.015em]">
+            Custom
+          </p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-400 dark:text-gray-500"
+          href="../color_palette_settings/code.html"
+        >
+          <div class="flex h-8 items-center justify-center">
             <span class="material-symbols-outlined">emoji_events</span>
-        </div>
-        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Awards</p>
-    </a>
-</div>
-</div>
-</body>
+          </div>
+          <p class="text-xs font-medium leading-normal tracking-[0.015em]">
+            Awards
+          </p>
+        </a>
+      </div>
+    </div>
+  </body>
 </html>
