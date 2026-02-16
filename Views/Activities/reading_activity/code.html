@@ -55,6 +55,14 @@
         body {
         min-height: max(884px, 100dvh);
         }
+        .correct-answer:checked ~ div {
+            background-color: rgba(134, 239, 172, 0.3) !important;
+            border-color: #22c55e !important;
+        }
+        .wrong-answer:checked ~ div {
+            background-color: rgba(254, 202, 202, 0.3) !important;
+            border-color: #ef4444 !important;
+        }
     </style>
     </head>
     <body
@@ -157,13 +165,13 @@
         <div class="w-full flex flex-col gap-4">
         <label class="relative w-full cursor-pointer">
             <input
-            class="peer absolute opacity-0 w-0 h-0"
+            class="peer wrong-answer absolute opacity-0 w-0 h-0"
             name="letter-choice"
             type="radio"
             value="B"
             />
             <div
-            class="w-full py-6 rounded-2xl bg-white dark:bg-zinc-900 border-4 border-transparent flex items-center justify-center shadow-md transition-all peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:scale-[1.02]"
+            class="w-full py-6 rounded-2xl bg-white dark:bg-zinc-900 border-4 border-transparent flex items-center justify-center shadow-md transition-all peer-checked:scale-[1.02]"
             >
             <span class="text-5xl font-bold text-zinc-800 dark:text-zinc-100"
                 >B</span
@@ -173,19 +181,19 @@
         <label class="relative w-full cursor-pointer">
             <input
             checked=""
-            class="peer absolute opacity-0 w-0 h-0"
+            class="peer correct-answer absolute opacity-0 w-0 h-0"
             name="letter-choice"
             type="radio"
             value="A"
             />
             <div
-            class="w-full py-6 rounded-2xl bg-white dark:bg-zinc-900 border-4 border-transparent flex items-center justify-center shadow-md transition-all peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:scale-[1.02]"
+            class="w-full py-6 rounded-2xl bg-white dark:bg-zinc-900 border-4 border-transparent flex items-center justify-center shadow-md transition-all peer-checked:scale-[1.02]"
             >
             <span class="text-5xl font-bold text-zinc-800 dark:text-zinc-100"
                 >A</span
             >
             <div
-                class="absolute right-6 size-10 bg-primary rounded-full hidden peer-checked:flex items-center justify-center text-white shadow-md"
+                class="absolute right-6 size-10 bg-green-500 rounded-full hidden peer-checked:flex items-center justify-center text-white shadow-md"
             >
                 <span class="material-symbols-outlined text-2xl">check</span>
             </div>
@@ -193,13 +201,13 @@
         </label>
         <label class="relative w-full cursor-pointer">
             <input
-            class="peer absolute opacity-0 w-0 h-0"
+            class="peer wrong-answer absolute opacity-0 w-0 h-0"
             name="letter-choice"
             type="radio"
             value="C"
             />
             <div
-            class="w-full py-6 rounded-2xl bg-white dark:bg-zinc-900 border-4 border-transparent flex items-center justify-center shadow-md transition-all peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:scale-[1.02]"
+            class="w-full py-6 rounded-2xl bg-white dark:bg-zinc-900 border-4 border-transparent flex items-center justify-center shadow-md transition-all peer-checked:scale-[1.02]"
             >
             <span class="text-5xl font-bold text-zinc-800 dark:text-zinc-100"
                 >C</span
@@ -212,6 +220,7 @@
         class="p-6 pb-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky bottom-0"
     >
         <button
+        onclick="window.location.href='../reward_activity/code.html'"
         class="w-full bg-primary hover:bg-primary/90 text-white text-xl font-bold py-5 rounded-full shadow-xl shadow-primary/30 flex items-center justify-center gap-3 transition-transform active:scale-95"
         >
         Next Level
